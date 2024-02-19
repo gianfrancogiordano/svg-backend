@@ -54,48 +54,46 @@ export const getMenu = (role: any) => {
       subAdmin.push({ titulo: 'Gestión de usuarios', url: 'usuarios' });
     }
 
-    // Menu Gestion del market
+    // Menu Inventario
     if (m.modulo === 'productos[Menu]' && m.visualizar) {
       menu.push({
-        titulo: 'Mi Tienda',
-        icono: 'fas fa-store',
+        titulo: 'Inventario',
+        icono: 'fas fa-boxes',
         submenu: subMenuNegocio
       });
 
-    } else if (m.modulo === 'productos[SubMenu]' && m.visualizar) {
-      subMenuNegocio.push({ titulo: 'Analytics', url: 'analytics' });
-      subMenuNegocio.push({ titulo: 'Categorías y Productos', url: 'config-market' });
     } else if (m.modulo === 'inventario[SubMenu]' && m.visualizar) {
-      subMenuNegocio.push({ titulo: 'Descuentos', url: 'descuentos' });
-      subMenuNegocio.push({ titulo: 'Inventario', url: 'inventario' });
-      subMenuNegocio.push({ titulo: 'Testimonios', url: 'reviews' });
+      subMenuNegocio.push({ titulo: 'Inventario de telas', url: 'inventario-telas' });
+      // subMenuNegocio.push({ titulo: 'Telas', url: 'telas' });
+      subMenuNegocio.push({ titulo: 'Productos', url: 'productos' });
+      subMenuNegocio.push({ titulo: 'Cortes', url: 'cortes' });
     }
 
     // Clientes del negocio
-    if (m.modulo === 'clientes[Menu]' && m.visualizar) {
-      menu.push({
-        titulo: 'Clientes',
-        icono: 'fas fa-user-tag',
-        submenu: subClientes
-      });
+    // if (m.modulo === 'clientes[Menu]' && m.visualizar) {
+    //   menu.push({
+    //     titulo: 'Clientes',
+    //     icono: 'fas fa-user-tag',
+    //     submenu: subClientes
+    //   });
 
-    } else if (m.modulo === 'clientes[SubMenu]' && m.visualizar) {
-      subClientes.push({ titulo: 'Clientes Registrados', url: 'clientes' });
-      subClientes.push({ titulo: 'Clientes Potenciales', url: 'landingleads' });
+    // } else if (m.modulo === 'clientes[SubMenu]' && m.visualizar) {
+    //   subClientes.push({ titulo: 'Clientes Registrados', url: 'clientes' });
+    //   subClientes.push({ titulo: 'Clientes Potenciales', url: 'landingleads' });
 
-    }
+    // }
 
     // Menu Pedidos
-    if (m.modulo === 'pedidos[Menu]' && m.visualizar) {
-      menu.push({
-        titulo: 'Pedidos',
-        icono: 'fas fa-shipping-fast',
-        submenu: subPedidos
-      });
+    // if (m.modulo === 'pedidos[Menu]' && m.visualizar) {
+    //   menu.push({
+    //     titulo: 'Pedidos',
+    //     icono: 'fas fa-shipping-fast',
+    //     submenu: subPedidos
+    //   });
 
-    } else if (m.modulo === 'pedidos[SubMenu]' && m.visualizar) {
-      subPedidos.push({ titulo: 'Pedidos, Ingresos y Gastos', url: 'balances' });
-    }
+    // } else if (m.modulo === 'pedidos[SubMenu]' && m.visualizar) {
+    //   subPedidos.push({ titulo: 'Pedidos, Ingresos y Gastos', url: 'balances' });
+    // }
 
     // // Menu Gestion de welcome page
     // if (m.modulo === 'productos[Menu]' && m.visualizar) {
@@ -121,23 +119,23 @@ export const getMenu = (role: any) => {
     //   subMenuWeb.push({ titulo: 'Creador de página web', url: 'config-landing' });
     // }
 
-    // Configuracion del negocio
-    if (m.modulo === 'negocio[Menu]' && m.visualizar) {
-      menu.push({
-        titulo: 'Configuraciones',
-        icono: 'fas fa-users-cog',
-        submenu: subNegocio
-      });
+    // // Configuracion del negocio
+    // if (m.modulo === 'negocio[Menu]' && m.visualizar) {
+    //   menu.push({
+    //     titulo: 'Configuraciones',
+    //     icono: 'fas fa-users-cog',
+    //     submenu: subNegocio
+    //   });
 
-    } else if (m.modulo === 'negocio[SubMenu]' && m.visualizar) {
-      subNegocio.push({ titulo: 'Links de tu Tienda', url: 'market-links' });
-      subNegocio.push({ titulo: 'Configuración del negocio', url: 'negocio' });
-      subNegocio.push({ titulo: 'Configuración de la tienda', url: 'config-market-user' });
-      subNegocio.push({ titulo: 'Configuración de la Página de bienvenida', url: 'config-welcome' });
-      subNegocio.push({ titulo: 'Configuración de página web', url: 'config-landing' });
-      // subNegocio.push({ titulo: 'Configuración de Sedes y Whatsapp', url: 'whatsapp-web-config' });
-      subNegocio.push({ titulo: 'Suscripción', url: 'suscripcion' });
-    }
+    // } else if (m.modulo === 'negocio[SubMenu]' && m.visualizar) {
+    //   // subNegocio.push({ titulo: 'Links de tu Tienda', url: 'market-links' });
+    //   // subNegocio.push({ titulo: 'Configuración del negocio', url: 'negocio' });
+    //   // subNegocio.push({ titulo: 'Configuración de la tienda', url: 'config-market-user' });
+    //   // subNegocio.push({ titulo: 'Configuración de la Página de bienvenida', url: 'config-welcome' });
+    //   // subNegocio.push({ titulo: 'Configuración de página web', url: 'config-landing' });
+    //   // subNegocio.push({ titulo: 'Configuración de Sedes y Whatsapp', url: 'whatsapp-web-config' });
+    //   // subNegocio.push({ titulo: 'Suscripción', url: 'suscripcion' });
+    // }
 
   });
 

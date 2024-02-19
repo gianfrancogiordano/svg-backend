@@ -22,6 +22,7 @@ import userRoutes from '../components/usuarios/usuarios.routes';
 import loginRoutes from '../components/login/login.routes';
 import roleRoutes from '../components/roles/roles.routes';
 import fileuploadRoutes from '../components/upload/upload.routes';
+import telasRoutes from '../components/telas/telas.routes';
 
 export default class Server {
 
@@ -39,6 +40,7 @@ export default class Server {
         login: '/api/v1/login',
         role: '/api/v1/role',
         fileupload: '/api/v1/fileupload',
+        telas: '/api/v1/telas',
     }
 
     private constructor() {
@@ -140,6 +142,7 @@ export default class Server {
         this.app.use(this.apiPaths.login, loginRoutes);
         this.app.use(this.apiPaths.role, roleRoutes);
         this.app.use(this.apiPaths.fileupload, fileuploadRoutes);
+        this.app.use(this.apiPaths.telas, telasRoutes);
     }
 
     listen() {
